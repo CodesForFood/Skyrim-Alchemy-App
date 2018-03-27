@@ -41,6 +41,8 @@
             this.InfoLbl = new System.Windows.Forms.Label();
             this.SearchIngBtn = new System.Windows.Forms.Button();
             this.SearchIngTB = new System.Windows.Forms.TextBox();
+            this.ShowAllBtn = new System.Windows.Forms.Button();
+            this.SearchEffBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IngLB
@@ -52,6 +54,7 @@
             this.IngLB.Name = "IngLB";
             this.IngLB.Size = new System.Drawing.Size(242, 264);
             this.IngLB.TabIndex = 0;
+            this.IngLB.SelectedIndexChanged += new System.EventHandler(this.IngLB_SelectedIndexChanged);
             // 
             // NameLbl
             // 
@@ -91,7 +94,7 @@
             this.Eff3Lbl.AutoEllipsis = true;
             this.Eff3Lbl.AutoSize = true;
             this.Eff3Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eff3Lbl.Location = new System.Drawing.Point(432, 105);
+            this.Eff3Lbl.Location = new System.Drawing.Point(505, 105);
             this.Eff3Lbl.Name = "Eff3Lbl";
             this.Eff3Lbl.Size = new System.Drawing.Size(65, 20);
             this.Eff3Lbl.TabIndex = 4;
@@ -102,7 +105,7 @@
             this.Eff4Lbl.AutoEllipsis = true;
             this.Eff4Lbl.AutoSize = true;
             this.Eff4Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eff4Lbl.Location = new System.Drawing.Point(432, 136);
+            this.Eff4Lbl.Location = new System.Drawing.Point(505, 136);
             this.Eff4Lbl.Name = "Eff4Lbl";
             this.Eff4Lbl.Size = new System.Drawing.Size(65, 20);
             this.Eff4Lbl.TabIndex = 5;
@@ -153,35 +156,58 @@
             this.InfoLbl.AutoEllipsis = true;
             this.InfoLbl.AutoSize = true;
             this.InfoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoLbl.Location = new System.Drawing.Point(8, 493);
+            this.InfoLbl.Location = new System.Drawing.Point(12, 350);
             this.InfoLbl.Name = "InfoLbl";
-            this.InfoLbl.Size = new System.Drawing.Size(60, 20);
+            this.InfoLbl.Size = new System.Drawing.Size(92, 20);
             this.InfoLbl.TabIndex = 11;
-            this.InfoLbl.Text = "label11";
+            this.InfoLbl.Text = "Placeholder";
             // 
             // SearchIngBtn
             // 
             this.SearchIngBtn.AutoSize = true;
-            this.SearchIngBtn.Location = new System.Drawing.Point(16, 25);
+            this.SearchIngBtn.Location = new System.Drawing.Point(287, 242);
             this.SearchIngBtn.Name = "SearchIngBtn";
             this.SearchIngBtn.Size = new System.Drawing.Size(116, 23);
             this.SearchIngBtn.TabIndex = 12;
-            this.SearchIngBtn.Text = "Search for Ingredient";
+            this.SearchIngBtn.Text = "Search by Ingredient";
             this.SearchIngBtn.UseVisualStyleBackColor = true;
             this.SearchIngBtn.Click += new System.EventHandler(this.SearchIngBtn_Click);
             // 
             // SearchIngTB
             // 
-            this.SearchIngTB.Location = new System.Drawing.Point(138, 28);
+            this.SearchIngTB.Location = new System.Drawing.Point(287, 289);
             this.SearchIngTB.Name = "SearchIngTB";
-            this.SearchIngTB.Size = new System.Drawing.Size(196, 20);
+            this.SearchIngTB.Size = new System.Drawing.Size(237, 20);
             this.SearchIngTB.TabIndex = 13;
+            // 
+            // ShowAllBtn
+            // 
+            this.ShowAllBtn.Location = new System.Drawing.Point(12, 12);
+            this.ShowAllBtn.Name = "ShowAllBtn";
+            this.ShowAllBtn.Size = new System.Drawing.Size(75, 23);
+            this.ShowAllBtn.TabIndex = 14;
+            this.ShowAllBtn.Text = "Show All";
+            this.ShowAllBtn.UseVisualStyleBackColor = true;
+            this.ShowAllBtn.Click += new System.EventHandler(this.ShowAllBtn_Click);
+            // 
+            // SearchEffBtn
+            // 
+            this.SearchEffBtn.AutoSize = true;
+            this.SearchEffBtn.Location = new System.Drawing.Point(428, 242);
+            this.SearchEffBtn.Name = "SearchEffBtn";
+            this.SearchEffBtn.Size = new System.Drawing.Size(96, 23);
+            this.SearchEffBtn.TabIndex = 15;
+            this.SearchEffBtn.Text = "Search by Effect";
+            this.SearchEffBtn.UseVisualStyleBackColor = true;
+            this.SearchEffBtn.Click += new System.EventHandler(this.SearchEffBtn_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 557);
+            this.ClientSize = new System.Drawing.Size(780, 379);
+            this.Controls.Add(this.SearchEffBtn);
+            this.Controls.Add(this.ShowAllBtn);
             this.Controls.Add(this.SearchIngTB);
             this.Controls.Add(this.SearchIngBtn);
             this.Controls.Add(this.InfoLbl);
@@ -218,6 +244,8 @@
         private System.Windows.Forms.Label InfoLbl;
         private System.Windows.Forms.Button SearchIngBtn;
         private System.Windows.Forms.TextBox SearchIngTB;
+        private System.Windows.Forms.Button ShowAllBtn;
+        private System.Windows.Forms.Button SearchEffBtn;
     }
 }
 
